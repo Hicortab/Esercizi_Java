@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\begin{document}
+
+\section{Teoria}
+
+\begin{itemize}
+    \item Che cos'è un'eccezione in Java? Qual è il suo scopo?
+    \item Qual è la differenza tra errori e eccezioni?
+    \item Quali sono le principali classi di eccezioni in Java?
+    \item Che cos'è il blocco \texttt{try-catch}? Come funziona?
+    \item Cosa significa lanciare (throw) un'eccezione? Come si fa?
+    \item Che cos'è il blocco \texttt{finally}? Quando viene eseguito?
+    \item Qual è la differenza tra eccezioni controllate (checked) e non controllate (unchecked)?
+    \item Come si crea una propria eccezione personalizzata?
+    \item Che ruolo ha la parola chiave \texttt{throws} nella dichiarazione di un metodo?
+    \item Perché è importante gestire correttamente le eccezioni?
+\end{itemize}
+
+\section{Eccezioni e Gestione degli Errori}
+
+\begin{enumerate}
+    \item \textbf{Divisione per zero} \\
+    Scrivi un programma che chiede due numeri interi e calcola la divisione. Gestisci l'eccezione di divisione per zero con un blocco \texttt{try-catch}.
+
+    \item \textbf{Parsing numerico} \\
+    Scrivi un programma che chiede una stringa e prova a convertirla in un numero intero. Gestisci l'eccezione \texttt{NumberFormatException}.
+
+    \item \textbf{Accesso a array} \\
+    Scrivi un programma che accede a un elemento di un array dato un indice inserito dall'utente. Gestisci l'eccezione \texttt{ArrayIndexOutOfBoundsException}.
+
+    \item \textbf{Lancio di eccezione personalizzata} \\
+    Crea una classe di eccezione personalizzata chiamata \texttt{ValoreNonValidoException}. Scrivi un metodo che lancia questa eccezione se un valore passato è negativo.
+
+    \item \textbf{Blocco finally} \\
+    Scrivi un programma con un blocco \texttt{try-catch-finally} che stampa un messaggio sia in caso di eccezione sia alla fine dell'esecuzione.
+
+    \item \textbf{Propagazione eccezioni} \\
+    Scrivi un metodo che lancia un'eccezione e un metodo chiamante che la gestisce con un blocco \texttt{try-catch}.
+
+    \item \textbf{Multipli catch} \\
+    Scrivi un esempio di codice che gestisce diverse eccezioni (\texttt{ArithmeticException}, \texttt{NullPointerException}) con più blocchi \texttt{catch}.
+
+    \item \textbf{Eccezioni runtime} \\
+    Spiega e mostra un esempio di eccezione non controllata (\texttt{NullPointerException}).
+
+    \item \textbf{Throws in dichiarazione metodo} \\
+    Scrivi un metodo che dichiara di lanciare un'eccezione con \texttt{throws} e mostra come chiamarlo da un altro metodo.
+
+    \item \textbf{Try-with-resources} \\
+    Spiega cos'è il try-with-resources e scrivi un esempio di utilizzo con un \texttt{BufferedReader} per leggere un file (puoi simulare il codice senza file esterno).
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass{article}
+
+\begin{document}
+
+\section{Teoria}
+
+\begin{itemize}
+    \item Che cos'è un design pattern? Perché è importante usarli nello sviluppo software?
+    \item Descrivi il pattern Singleton. Qual è il suo scopo principale?
+    \item Quali sono i principali problemi che il Singleton risolve?
+    \item Come si implementa correttamente un Singleton in Java? Quali sono le varianti comuni?
+    \item Quali sono i potenziali problemi del Singleton in contesti multithreading e come si possono risolvere?
+    \item Che cos'è un Iterator? Qual è il suo scopo nei pattern di progettazione?
+    \item Come funziona il pattern Iterator? Quali metodi fondamentali contiene un Iterator?
+    \item Quali sono i vantaggi dell'uso di un Iterator rispetto all'accesso diretto agli elementi di una collezione?
+    \item In Java, quali interfacce standard definiscono l'Iterator?
+    \item Puoi fare un esempio di utilizzo di un Iterator per scorrere una collezione?
+\end{itemize}
+
+\section{Esercizi sul Singleton}
+
+\begin{enumerate}
+    \item \textbf{Implementazione Singleton semplice} \\
+    Scrivi una classe \texttt{Configurazione} che implementa il pattern Singleton. Assicurati che ci sia un solo oggetto istanziato e che l'accesso sia tramite un metodo statico.
+
+    \item \textbf{Singleton thread-safe} \\
+    Modifica la classe \texttt{Configurazione} per renderla thread-safe usando la sincronizzazione.
+
+    \item \textbf{Singleton con inizializzazione lazy} \\
+    Implementa un Singleton che istanzia l'oggetto solo al primo utilizzo (lazy initialization).
+
+    \item \textbf{Test del Singleton} \\
+    Scrivi un breve programma che prova a creare più istanze della classe Singleton e verifica che si tratti della stessa istanza.
+
+    \item \textbf{Singleton e serializzazione} \\
+    Spiega come garantire che un Singleton rimanga unico anche dopo la serializzazione e deserializzazione.
+\end{enumerate}
+
+\section{Esercizi sull'Iterator}
+
+\begin{enumerate}
+    \item \textbf{Uso di Iterator su ArrayList} \\
+    Crea un \texttt{ArrayList} di interi e usa un Iterator per stampare tutti gli elementi.
+
+    \item \textbf{Iterator su una struttura dati personalizzata} \\
+    Definisci una semplice classe \texttt{ListaDiNomi} che contiene una lista interna di stringhe. Implementa un metodo che restituisce un Iterator per scorrere i nomi.
+
+    \item \textbf{Rimozione di elementi con Iterator} \\
+    Usa un Iterator su una collezione per rimuovere tutti gli elementi che soddisfano una certa condizione (ad esempio numeri pari).
+
+    \item \textbf{Implementazione manuale di un Iterator} \\
+    Crea una classe \texttt{Contatore} che contiene un array di numeri interi e implementa manualmente un Iterator per scorrere questi numeri.
+
+    \item \textbf{Confronto tra for-each e Iterator} \\
+    Scrivi un breve testo che spiega le differenze tra l'uso del ciclo for-each e l'uso esplicito di un Iterator. Quando è preferibile usare uno rispetto all'altro?
+\end{enumerate}
+
+\end{document}

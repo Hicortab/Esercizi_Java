@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\begin{document}
+
+\section{Teoria}
+
+\begin{itemize}
+    \item Che cos'è un flusso (stream) in Java? Qual è la differenza tra flussi di byte e di caratteri?
+    \item Quali classi Java vengono utilizzate per la lettura e la scrittura di file di testo?
+    \item Come si crea un file in Java? Quali metodi sono disponibili per verificare l'esistenza di un file?
+    \item Come si legge un file di testo riga per riga in Java? Quali classi e metodi si utilizzano?
+    \item Come si scrive su un file di testo in Java? Quali classi e metodi si utilizzano?
+    \item Cos'è il buffering in I/O? Quali vantaggi offre l'uso di buffer nella lettura e scrittura di file?
+    \item Come si gestisce la chiusura automatica delle risorse in Java durante le operazioni di I/O?
+    \item Quali sono le differenze tra le classi \texttt{File}, \texttt{FileReader}, \texttt{BufferedReader}, \texttt{FileWriter} e \texttt{BufferedWriter}?
+    \item Cos'è il package \texttt{java.nio.file} e come si differenzia dal package \texttt{java.io} nella gestione dei file?
+    \item Come si gestiscono le eccezioni comuni durante le operazioni di I/O, come \texttt{IOException} e \texttt{FileNotFoundException}?
+\end{itemize}
+
+\section{Gestione dei File}
+
+\begin{enumerate}
+    \item \textbf{Creazione di un file e scrittura di dati} \\
+    Scrivi un programma che crea un file chiamato \texttt{esempio.txt} e vi scrive la stringa ``Ciao, mondo!'' al suo interno.
+
+    \item \textbf{Lettura di un file riga per riga} \\
+    Scrivi un programma che apre il file \texttt{esempio.txt} e stampa ogni riga del file sulla console.
+
+    \item \textbf{Scrittura di più righe su un file} \\
+    Scrivi un programma che scrive tre righe di testo nel file \texttt{esempio.txt}, sovrascrivendo il contenuto esistente.
+
+    \item \textbf{Aggiunta di contenuto a un file esistente} \\
+    Scrivi un programma che apre il file \texttt{esempio.txt} in modalità append e aggiunge una nuova riga di testo alla fine del file.
+
+    \item \textbf{Lettura di un file utilizzando \texttt{Files.readAllLines}} \\
+    Scrivi un programma che legge tutte le righe del file \texttt{esempio.txt} utilizzando il metodo \texttt{Files.readAllLines} e le stampa sulla console.
+
+    \item \textbf{Verifica dell'esistenza di un file} \\
+    Scrivi un programma che verifica se il file \texttt{esempio.txt} esiste e stampa un messaggio appropriato sulla console.
+
+    \item \textbf{Copia di un file} \\
+    Scrivi un programma che copia il contenuto di \texttt{esempio.txt} in un nuovo file chiamato \texttt{copia.txt}.
+
+    \item \textbf{Eliminazione di un file} \\
+    Scrivi un programma che elimina il file \texttt{copia.txt} se esiste.
+
+    \item \textbf{Lettura di un file con \texttt{Scanner}} \\
+    Scrivi un programma che legge il contenuto del file \texttt{esempio.txt} utilizzando la classe \texttt{Scanner} e lo stampa sulla console.
+
+    \item \textbf{Gestione delle eccezioni durante le operazioni di I/O} \\
+    Scrivi un programma che tenta di aprire il file \texttt{esempio.txt} e gestisce eventuali eccezioni \texttt{IOException} e \texttt{FileNotFoundException} con messaggi appropriati.
+\end{enumerate}
+
+\end{document}

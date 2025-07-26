@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\begin{document}
+
+\section{Teoria}
+
+\begin{itemize}
+    \item Che cos'è l'ereditarietà in Java? A cosa serve?
+    \item Come si dichiara una classe che estende un'altra classe?
+    \item Qual è la differenza tra classe base (superclasse) e classe derivata (sottoclasse)?
+    \item Cos'è il metodo \texttt{super} e quando si usa?
+    \item Che cos'è il polimorfismo in Java? Come si manifesta?
+    \item Cos'è l'overriding di un metodo? Come si differenzia dall'overloading?
+    \item È possibile chiamare un metodo della superclasse da una sottoclasse? Come?
+    \item Cos'è il binding dinamico (late binding) nei metodi?
+    \item Che ruolo hanno i metodi astratti e le classi astratte nell'ereditarietà?
+    \item Cos'è un'interfaccia in Java e come differisce dall'ereditarietà delle classi?
+\end{itemize}
+
+\section{Ereditarietà e Polimorfismo}
+
+\begin{enumerate}
+    \item \textbf{Classe base Animale} \\
+    Crea una classe \texttt{Animale} con un metodo \texttt{verso()} che stampa un messaggio generico.
+
+    \item \textbf{Classi derivata Cane e Gatto} \\
+    Crea le classi \texttt{Cane} e \texttt{Gatto} che estendono \texttt{Animale} e sovrascrivono il metodo \texttt{verso()} per stampare suoni specifici.
+
+    \item \textbf{Polimorfismo con Animale} \\
+    Scrivi un metodo che riceve un oggetto \texttt{Animale} e chiama \texttt{verso()}. Prova a passare oggetti di tipo \texttt{Cane} e \texttt{Gatto}.
+
+    \item \textbf{Costruttore con super} \\
+    Nella classe derivata \texttt{Cane}, crea un costruttore che richiama il costruttore della superclasse \texttt{Animale} usando \texttt{super}.
+
+    \item \textbf{Override e overloading} \\
+    Nella classe \texttt{Gatto}, scrivi un metodo \texttt{verso()} che sovrascrive quello della superclasse e un metodo \texttt{verso(String emozione)} che lo sovraccarica.
+
+    \item \textbf{Classe astratta Veicolo} \\
+    Definisci una classe astratta \texttt{Veicolo} con un metodo astratto \texttt{muovi()}. Crea due classi derivate \texttt{Auto} e \texttt{Bicicletta} che implementano \texttt{muovi()}.
+
+    \item \textbf{Interfaccia Volante} \\
+    Crea un'interfaccia \texttt{Volante} con metodo \texttt{vola()}. Fai in modo che la classe \texttt{Uccello} implementi questa interfaccia.
+
+    \item \textbf{Ereditarietà multipla tramite interfacce} \\
+    Crea due interfacce \texttt{Nuotatore} e \texttt{Volante}. Crea una classe \texttt{Anatra} che implementa entrambe.
+
+    \item \textbf{Casting e istanze} \\
+    Dato un oggetto di tipo \texttt{Animale}, verifica se è istanza di \texttt{Cane} usando \texttt{instanceof} e fai un cast per chiamare un metodo specifico.
+
+    \item \textbf{Metodo finale} \\
+    Spiega e mostra un esempio in cui un metodo è dichiarato \texttt{final} e non può essere sovrascritto nella sottoclasse.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,123 @@
+\documentclass{article}
+
+\begin{document}
+
+\section{Teoria}
+
+\begin{itemize}
+
+    \item Perché dovremmo utilizzare lo switch rispetto alla struttura di controllo?
+    \item E' possibile non aprire le parentesi graffe nelle strutture di controllo? In quale caso?
+    \item Quando ci conviene usare l'operatore ternario e come si usa? Scrivi un codice
+    \item Quale pezzo della struttura di controllo (if, else-if ed else) può esistere senza gli altri pezzi? 
+    \item Quanti else-if può avere la struttura di controllo?
+
+\end{itemize}
+
+\section{Struttura di controllo}
+
+\begin{enumerate}
+    \item \textbf{Controllo pari o dispari} \\
+    Chiedi all'utente un numero intero e stampa se è \textit{pari}, \textit{dispari} o \textit{zero}.
+    
+    \item \textbf{Verifica voto scolastico} \\
+    Data una valutazione numerica (0--100), stampa: \\
+    \quad - ``Insufficiente'' per $<60$ \\
+    \quad - ``Sufficiente'' per $60$--$69$ \\
+    \quad - ``Buono'' per $70$--$79$ \\
+    \quad - ``Distinto'' per $80$--$89$ \\
+    \quad - ``Ottimo'' per $90$--$100$ \\
+    \quad - ``Valore non valido'' per valori fuori range
+    
+    \item \textbf{Calcolo sconto in base all'età} \\
+    Dato l'età di una persona, stampa lo sconto applicato su un biglietto: \\
+    \quad - sotto 12 anni: 50\% \\
+    \quad - 12--17 anni: 25\% \\
+    \quad - 18--64 anni: nessuno sconto \\
+    \quad - 65 anni e oltre: 40\%
+    
+    \item \textbf{Classifica di gara} \\
+    Dato il tempo in secondi, assegna la categoria: \\
+    \quad - $<10$s: ``Campione'' \\
+    \quad - $10$--$20$s: ``Esperto'' \\
+    \quad - $20$--$30$s: ``Intermedio'' \\
+    \quad - $>30$s: ``Principiante''
+    
+    \item \textbf{Controllo orario} \\
+    Data un'ora (0--23), stampa: \\
+    \quad - ``Mattina'' per 5--11 \\
+    \quad - ``Pomeriggio'' per 12--17 \\
+    \quad - ``Sera'' per 18--21 \\
+    \quad - ``Notte'' per 22--4
+    
+    \item \textbf{Controllo password} \\
+    Chiedi una password all'utente e confrontala con una password corretta memorizzata. Stampa: \\
+    \quad - ``Accesso consentito'' se uguali \\
+    \quad - ``Password errata'' altrimenti
+    
+    \item \textbf{Calcolo tassa automobilistica} \\
+    Data la cilindrata di un'auto, applica: \\
+    \quad - fino a 1000 cc: tassa 100€ \\
+    \quad - 1001--1600 cc: tassa 200€ \\
+    \quad - 1601--2500 cc: tassa 300€ \\
+    \quad - oltre 2500 cc: tassa 500€
+    
+    \item \textbf{Controllo temperatura} \\
+    Dato un valore in gradi Celsius, stampa: \\
+    \quad - ``Gelo'' per temperature $<0$ \\
+    \quad - ``Freddo'' per 0--10 \\
+    \quad - ``Temperato'' per 11--20 \\
+    \quad - ``Caldo'' per 21--30 \\
+    \quad - ``Molto caldo'' per $>30$
+    
+    \item \textbf{Valutazione anno scolastico} \\
+    Data la media finale di un alunno, stampa: \\
+    \quad - ``Bocciato'' per media $<6$ \\
+    \quad - ``Rimandato'' per media 6--6.9 \\
+    \quad - ``Promosso'' per media 7--8.9 \\
+    \quad - ``Ottimo'' per media $\geq 9$
+    
+    \item \textbf{Controllo traffico} \\
+    Dato il colore del semaforo (inserito come stringa: ``rosso'', ``giallo'', ``verde''), stampa: \\
+    \quad - ``Fermati'' per rosso \\
+    \quad - ``Attenzione'' per giallo \\
+    \quad - ``Vai'' per verde \\
+    \quad - ``Colore non valido'' per altro
+\end{enumerate}
+
+\section{Switch}
+
+\begin{enumerate}
+    \item \textbf{Giorno della settimana} \\
+    Dato un numero da 1 a 7, stampa il nome del giorno della settimana (1 = Lunedì, 7 = Domenica). Se il numero non è valido, stampa ``Numero non valido''.
+    
+    \item \textbf{Mese dell'anno} \\
+    Data una variabile intera da 1 a 12, stampa il nome del mese corrispondente. Se il numero è fuori range, stampa ``Mese non valido''.
+    
+    \item \textbf{Categoria prodotto} \\
+    Data una lettera (\texttt{char}) che indica la categoria di un prodotto (ad esempio \texttt{'A'}, \texttt{'B'}, \texttt{'C'}), stampa una descrizione della categoria. Se la lettera non è prevista, stampa ``Categoria sconosciuta''.
+    
+    \item \textbf{Calcolo operazione base} \\
+    Dati due numeri e un operatore (\texttt{+}, \texttt{-}, \texttt{*}, \texttt{/}), esegui l'operazione e stampa il risultato. Se l'operatore non è valido, stampa ``Operatore non valido''.
+    
+    \item \textbf{Tipo di veicolo} \\
+    Data una sigla (\texttt{"car"}, \texttt{"bike"}, \texttt{"truck"}), stampa il tipo di veicolo corrispondente. Usa \texttt{switch} con stringhe.
+    
+    \item \textbf{Valutazione con lettere} \\
+    Data una lettera da \texttt{'A'} a \texttt{'F'}, stampa la valutazione corrispondente: \\
+    \quad A - Eccellente \\
+    \quad B - Buono \\
+    \quad C - Sufficiente \\
+    \quad D - Insufficiente \\
+    \quad E - Scarso \\
+    \quad F - Fallito \\
+    Se la lettera è diversa, stampa ``Valutazione non valida''.
+    
+    \item \textbf{Calcolo giorni mese} \\
+    Dato il numero di un mese (1-12), stampa quanti giorni ha quel mese (considera febbraio 28 giorni, non bisestile).
+    
+    \item \textbf{Risposta automatica} \\
+    Data una stringa che rappresenta una risposta (\texttt{"yes"}, \texttt{"no"}, \texttt{"maybe"}), stampa una risposta automatica. Per altri input, stampa ``Risposta non riconosciuta''.
+\end{enumerate}
+
+\end{document}

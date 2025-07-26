@@ -1,0 +1,135 @@
+\documentclass{article}
+
+\begin{document}
+
+\section{Teoria}
+
+\begin{enumerate}
+
+    \item Se inserisco un valore con la virgola in una variabile int cosa succede?
+    
+    \item Indicare esplicitamente QUANDO e PERCHE' utilizzare una variabile e quando una costante
+    
+    \item Valuta il seguente codice, qual è l'output atteso? Cerca di spiegare perché il programma EVENTUALMENTE
+    si comporta in maniera diversa in questi 2 casi.
+    
+    \begin{verbatim}
+        String primaVariabile = "2";
+        String secondaVariabile = "1";
+
+        System.out.println(primaVariabile + secondaVariabile);
+
+        int numero1 = 2;
+        int numero2 = 1;
+
+        System.out.println(numero1 + numero2);
+
+    \end{verbatim}
+
+    \item In un programma, quando dovrei utilizzare il tipo int, float, double, String? Secondo quale esigenza?
+
+    \item Qual è la differenza tra float e double?
+    
+    \item \textbf{Approfondimento}: Perché il seguente codice dovrebbe dare i seguenti output (ammesso che lo faccia)
+    
+    \begin{verbatim}
+        
+        // Primo codice
+
+        float a = 1/3;
+		
+		System.out.println(a);
+
+        Output: 0.0
+
+        // Secondo codice
+
+        float a = (float)1/3;
+
+        System.out.println(a);
+
+        Output: 0.33333334
+
+    \end{verbatim}
+
+    \item Parlami della notazione camelCase e sneak\_case. A cosa servono e perché utilizzare una o l'altra?
+    Ci sono zone del codice dove è CONSIGLIABILE usare una piuttosto che l'altra?
+
+    \item Le variabili possono contenere valori inifiniti o finiti?
+    
+    \item Per maggiore leggibilità posso dividere le cifre di una variabile secondo un preciso criterio? 
+    Se sì come? Scrivi un codice che lo mostri e indica il relativo output
+
+    \item Come inserisco un valore esadecimale o binario nelle variabili int? Crea un codice
+
+    \item Esistono delle regole di nomenclatura per le costanti o seguono le regole delle variabili?
+    
+    \item Indicare nella maniera più chiara possibile le regole per dichiarare una variabile
+    senza far sollevare errori dal compilatore.
+
+    \item Qual è la differenza tra dichiarazione e assegnazione? Se può aiutarti scrivi del codice a supporto
+    della tua risposta.
+
+\end{enumerate}
+
+\section{Variabili}
+
+\begin{enumerate}
+    
+    \item Scrivi un programma che presi i lati di un rettangolo calcoli la sua area e il perimetro. Ti ricordi come si fa...?
+    Chi è l'input di questo programma? E l'output?
+
+    \item Dati 2 numeri stampa la somma, differenza, prodotto e divisione di quest'ultimi
+    
+    \item Crea un programma che converta i km in metri 
+    
+    \item Chiedi il nome e il cognome all'utente e stampa il nome completo su una sola riga.
+    
+    \item Chiedi all'utente il suo anno di nascita e calcola l'età attuale.
+    
+    \item Dichiara una variabile intera e una variabile DOUBLE, sommale e visualizza il risultato.
+    
+    \item Chiedi all'utente di inserire un numero di minuti e converti il valore in ore e minuti (es. 130 minuti → 2 ore e 10 minuti).
+
+    \item Chiedi all'utente un numero e stampa il suo quadrato.
+    
+    \item Hai tre variabili: a = 5, b = 10, c = 0. Sposta i valori in modo che:
+
+    \begin{itemize}
+
+        \item c contenga il valore di a
+        \item a contenga il valore di b
+        \item b contenga il valore originale di c
+
+    \end{itemize}
+
+    \item Dichiara una variabile int somma = 0. Chiedi tre numeri all'utente e ogni volta somma 
+    il numero alla variabile somma, riassegnandola. Stampa la somma finale.
+
+    \item Dichiara una variabile DI UN TIPO CORRETTO per eseguire le seguenti operazioni 
+    ottenendo un risultato NON TRONCATO e:
+
+    \begin{itemize}
+        \item incrementala di 1
+        \item moltiplicala per 2
+        \item sottrai 3
+        \item dividila per 2
+    \end{itemize}
+
+\end{enumerate}
+
+\section{Costanti}
+
+\begin{enumerate}
+    
+    \item Dichiara una costante PI con valore 3.1416. Chiedi il raggio all'utente e calcola l'area del 
+    cerchio (A = PI * r * r). Prova a riassegnare PI per vedere cosa succede (errore di compilazione).
+
+    \item Imposta una costante SCONTO\_FISSO = 20. Dichiara una variabile prezzoIniziale, calcola e stampa 
+    il prezzo scontato. Sottolinea che il valore dello sconto non può essere cambiato.
+
+    \item Imposta una costante TASSO\_CAMBIO = 1.12. Chiedi all'utente quanti euro vuole convertire e stampa il corrispettivo in dollari.
+
+\end{enumerate}
+
+\end{document}
