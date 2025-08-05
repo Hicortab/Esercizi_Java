@@ -55,34 +55,67 @@
     \quad - ``Accesso consentito'' se uguali \\
     \quad - ``Password errata'' altrimenti
     
-    \item \textbf{Calcolo tassa automobilistica} \\
-    Data la cilindrata di un'auto, applica: \\
-    \quad - fino a 1000 cc: tassa 100€ \\
-    \quad - 1001--1600 cc: tassa 200€ \\
-    \quad - 1601--2500 cc: tassa 300€ \\
-    \quad - oltre 2500 cc: tassa 500€
-    
-    \item \textbf{Controllo temperatura} \\
-    Dato un valore in gradi Celsius, stampa: \\
-    \quad - ``Gelo'' per temperature $<0$ \\
-    \quad - ``Freddo'' per 0--10 \\
-    \quad - ``Temperato'' per 11--20 \\
-    \quad - ``Caldo'' per 21--30 \\
-    \quad - ``Molto caldo'' per $>30$
-    
-    \item \textbf{Valutazione anno scolastico} \\
-    Data la media finale di un alunno, stampa: \\
-    \quad - ``Bocciato'' per media $<6$ \\
-    \quad - ``Rimandato'' per media 6--6.9 \\
-    \quad - ``Promosso'' per media 7--8.9 \\
-    \quad - ``Ottimo'' per media $\geq 9$
-    
-    \item \textbf{Controllo traffico} \\
-    Dato il colore del semaforo (inserito come stringa: ``rosso'', ``giallo'', ``verde''), stampa: \\
-    \quad - ``Fermati'' per rosso \\
-    \quad - ``Attenzione'' per giallo \\
-    \quad - ``Vai'' per verde \\
-    \quad - ``Colore non valido'' per altro
+    \item \textbf{Gestione Multa e Punti Patente} \\
+    Un'auto ha una \textbf{cilindrata} e una \textbf{velocità} rilevata in un tratto di strada. La velocità massima consentita è di \textbf{100 km/h}.
+
+    \begin{enumerate}
+        \item Calcola una \textbf{multa base} in base alla velocità:
+        \begin{itemize}
+            \item Fino a 110 km/h (ATTENZIONE): multa di 50 euro.
+            \item Tra 111 e 130 km/h: multa di 100 euro.
+            \item Oltre 130 km/h: multa di 300 euro.
+        \end{itemize}
+        
+        \item Applica un \textbf{incremento del 20\%} alla multa se la cilindrata dell'auto è superiore a 2500 cc.
+        
+        \item Assegna i \textbf{punti di decurtazione} dalla patente:
+        \begin{itemize}
+            \item Se la velocità è superiore a 130 km/h: -5 punti.
+            \item Se la velocità è tra 111 e 130 km/h: -3 punti.
+            \item Altrimenti: nessuna decurtazione.
+        \end{itemize}
+        
+        \item Stampa la \textbf{multa finale} e i \textbf{punti decurtati}.
+    \end{enumerate}
+
+    \vspace{0.5cm}
+
+    \item \textbf{Valutazione e Bonus Studente} \\
+
+    Un alunno ha una \textbf{media finale} e un numero di \textbf{assenze}.
+
+    \begin{enumerate}
+        \item Stabilisci lo \textbf{stato dello studente} (\textit{Bocciato}, \textit{Rimandato}, \textit{Promosso}, \textit{Ottimo}) in base alla media finale.
+        
+        \item Se lo studente è stato valutato come \textit{Promosso}, applica un \textbf{bonus} di 100 euro se:
+        \begin{itemize}
+            \item La media finale è maggiore o uguale a 8.5
+            \item Le assenze totali sono inferiori a 10
+        \end{itemize}
+        
+        \item Stampa gli eventuali \textbf{bonus} e \textbf{lo stato dello studente}.
+    \end{enumerate}
+
+    \vspace{0.5cm}
+
+    \item \textbf{Controllo Semaforo Dinamico con Pedone} \\
+
+    Il semaforo ha tre stati possibili, inseriti come stringa: \texttt{"rosso"}, \texttt{"giallo"} e \texttt{"verde"}. In aggiunta, c'è una variabile booleana \texttt{is\_pedone} che indica la presenza di un pedone che vuole attraversare.
+
+    \begin{itemize}
+        \item Se il semaforo è \texttt{"verde"}, l'istruzione è \textbf{Vai}.
+        \item Se il semaforo è \texttt{"giallo"}, l'istruzione è \textbf{Attenzione}.
+        \item Se il semaforo è \texttt{"rosso"}, l'istruzione è \textbf{Fermati}.
+        \item Se è presente un pedone (\texttt{is\_pedone = true}), la priorità va a lui e l'istruzione da mostrare al conducente deve essere: \textbf{Fermati (priorità al pedone)}.
+        \item Qualsiasi altro valore inserito per il colore del semaforo è da considerarsi non valido: l'istruzione sarà \textbf{Colore non valido}.
+    \end{itemize}
+
+    \medskip
+
+    \noindent
+    \textbf{Obiettivo:} stampa l'istruzione finale da mostrare al conducente, tenendo conto della presenza del pedone come priorità assoluta.
+
+
 \end{enumerate}
 
 \section{Switch}
@@ -91,33 +124,12 @@
     \item \textbf{Giorno della settimana} \\
     Dato un numero da 1 a 7, stampa il nome del giorno della settimana (1 = Lunedì, 7 = Domenica). Se il numero non è valido, stampa ``Numero non valido''.
     
-    \item \textbf{Mese dell'anno} \\
-    Data una variabile intera da 1 a 12, stampa il nome del mese corrispondente. Se il numero è fuori range, stampa ``Mese non valido''.
-    
     \item \textbf{Categoria prodotto} \\
     Data una lettera (\texttt{char}) che indica la categoria di un prodotto (ad esempio \texttt{'A'}, \texttt{'B'}, \texttt{'C'}), stampa una descrizione della categoria. Se la lettera non è prevista, stampa ``Categoria sconosciuta''.
     
     \item \textbf{Calcolo operazione base} \\
     Dati due numeri e un operatore (\texttt{+}, \texttt{-}, \texttt{*}, \texttt{/}), esegui l'operazione e stampa il risultato. Se l'operatore non è valido, stampa ``Operatore non valido''.
-    
-    \item \textbf{Tipo di veicolo} \\
-    Data una sigla (\texttt{"car"}, \texttt{"bike"}, \texttt{"truck"}), stampa il tipo di veicolo corrispondente. Usa \texttt{switch} con stringhe.
-    
-    \item \textbf{Valutazione con lettere} \\
-    Data una lettera da \texttt{'A'} a \texttt{'F'}, stampa la valutazione corrispondente: \\
-    \quad A - Eccellente \\
-    \quad B - Buono \\
-    \quad C - Sufficiente \\
-    \quad D - Insufficiente \\
-    \quad E - Scarso \\
-    \quad F - Fallito \\
-    Se la lettera è diversa, stampa ``Valutazione non valida''.
-    
-    \item \textbf{Calcolo giorni mese} \\
-    Dato il numero di un mese (1-12), stampa quanti giorni ha quel mese (considera febbraio 28 giorni, non bisestile).
-    
-    \item \textbf{Risposta automatica} \\
-    Data una stringa che rappresenta una risposta (\texttt{"yes"}, \texttt{"no"}, \texttt{"maybe"}), stampa una risposta automatica. Per altri input, stampa ``Risposta non riconosciuta''.
+
 \end{enumerate}
 
 \end{document}
