@@ -31,23 +31,21 @@
     \item \textbf{Classe Libro} \\
     Crea una classe \texttt{Libro} con attributi \texttt{titolo}, \texttt{autore}, \texttt{numeroPagine}. Crea un metodo per restituire una descrizione del libro.
 
-    \item \textbf{Classe Banca} \\
-    Crea una classe \texttt{ContoBancario} con attributi \texttt{saldo} e metodi \texttt{deposito} e \texttt{prelievo}.
-
-    \item \textbf{Classe Punto} \\
-    Crea una classe \texttt{Punto} con attributi \texttt{x} e \texttt{y}. Implementa un metodo che calcoli la distanza da un altro punto.
-
-    \item \textbf{Classe Automobile} \\
-    Crea una classe \texttt{Automobile} con attributi \texttt{marca}, \texttt{modello}, \texttt{velocità}. Aggiungi un metodo \texttt{accelera} che aumenti la velocità.
-
-    \item \textbf{Classe Prodotto} \\
-    Crea una classe \texttt{Prodotto} con attributi \texttt{nome}, \texttt{prezzo}, \texttt{quantità}. Aggiungi un metodo che calcoli il prezzo totale in base alla quantità.
-
-    \item \textbf{Classe Film} \\
-    Crea una classe \texttt{Film} con attributi \texttt{titolo}, \texttt{genere}, \texttt{durata}. Crea un metodo che stampi un messaggio se il film dura più di 120 minuti.
-
-    \item \textbf{Classe Temperatura} \\
-    Crea una classe \texttt{Temperatura} con un attributo in gradi Celsius e metodi per convertire in Fahrenheit e Kelvin.
 \end{enumerate}
+
+\subsection*{Esercizio: Sistema di Gestione Utenti}
+Crea una classe \textbf{Utente} con i seguenti attributi:
+\begin{itemize}
+    \item \textbf{username} (stringa)
+    \item \textbf{password} (stringa)
+    \item \textbf{email} (stringa)
+    \item \textbf{loggato}
+\end{itemize}
+Implementa i seguenti metodi:
+\begin{itemize}
+    \item Un metodo \texttt{registra(String newUsername, String newPassword, String newEmail)} che imposta i dati dell'utente. Restituisci \texttt{true} se la registrazione ha successo (se i campi non sono vuoti), altrimenti \texttt{false}.
+    \item Un metodo \texttt{accedi(String usernameInserito, String passwordInserita)} che verifica se le credenziali inserite corrispondono a quelle dell'utente. Se le credenziali sono corrette, imposta l'attributo \texttt{loggato} a \texttt{true} e restituisci \texttt{true}, altrimenti \texttt{false}.
+    \item Un metodo \texttt{cambiaPassword(String vecchiaPassword, String nuovaPassword)} che permette di cambiare la password, ma solo se l'utente è \texttt{loggato} e la vecchia password inserita è corretta.
+\end{itemize}
 
 \end{document}

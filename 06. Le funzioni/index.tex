@@ -39,18 +39,46 @@
     \item \textbf{Area di un rettangolo} \\
     Scrivi una funzione che riceve base e altezza di un rettangolo e restituisce la sua area.
 
-    \item \textbf{Stampa menu} \\
-    Scrivi una funzione \texttt{void} che stampa a schermo un menu di opzioni.
-
-    \item \textbf{Potenza} \\
-    Scrivi una funzione che prende due numeri interi: base ed esponente, e calcola la potenza.
-
-    \item \textbf{Conta vocali} \\
-    Scrivi una funzione che riceve una stringa e restituisce il numero di vocali presenti.
-
-    \item \textbf{Conversione temperatura} \\
-    Scrivi una funzione che converte gradi Celsius in Fahrenheit usando la formula: \\
-    \quad $F = C \cdot \frac{9}{5} + 32$
 \end{enumerate}
+
+    \section*{Esercizio: Gestione Spese Familiari}
+
+    L'obiettivo è creare un programma per la gestione e l'analisi delle spese familiari, suddividendo la logica in tre funzioni distinte che collaborano tra loro.
+
+    \subsection*{Funzioni da implementare}
+
+    \subsubsection*{`calcolaMediaSpese(int[] spese)`}
+    Questa funzione accetta un \textbf{array di numeri interi} e calcola la \textbf{media aritmetica} di tutte le spese.
+    \begin{itemize}
+        \item \textbf{Parametro:} \texttt{int[] spese} (l'array delle spese).
+        \item \textbf{Valore di ritorno:} \texttt{double} (la media delle spese).
+    \end{itemize}
+
+    \subsubsection*{`trovaSpesaMaggiore(int[] spese)`}
+    Questa funzione accetta lo stesso array di spese e individua il valore massimo al suo interno.
+    \begin{itemize}
+        \item \textbf{Parametro:} \texttt{int[] spese} (l'array delle spese).
+        \item \textbf{Valore di ritorno:} \texttt{int} (il valore della spesa maggiore).
+    \end{itemize}
+
+    \subsubsection*{`analizzaBudget(double media, int spesaMaggiore, int budgetMassimo)`}
+    Questa funzione analizza i valori passati e restituisce una stringa che indica lo stato del budget familiare.
+    \begin{itemize}
+        \item Se la \texttt{spesaMaggiore} è superiore a \texttt{budgetMassimo}, restituisce ``Attenzione! Una singola spesa ha superato il budget.''.
+        \item Altrimenti, se la \texttt{media} è superiore a \texttt{budgetMassimo}, restituisce ``Attenzione! La media delle spese ha superato il budget. Considera di ridurre le uscite.''.
+        \item In tutti gli altri casi, restituisce ``Ottima gestione delle spese!''.
+    \end{itemize}
+    \begin{itemize}
+        \item \textbf{Parametri:} \texttt{double media}, \texttt{int spesaMaggiore}, \texttt{int budgetMassimo}.
+        \item \textbf{Valore di ritorno:} \texttt{String} (il messaggio di analisi).
+    \end{itemize}
+
+    \subsection*{Implementazione richiesta}
+    \begin{enumerate}
+        \item Creare un array di esempio con delle spese.
+        \item Definire una costante per il budget massimo (es. \texttt{int budgetMassimo = 500;}).
+        \item Nel metodo \texttt{main}, chiamare le funzioni nell'ordine corretto per ottenere i valori necessari.
+        \item Stampare a console il messaggio finale restituito dalla funzione \texttt{analizzaBudget}.
+    \end{enumerate}
 
 \end{document}
