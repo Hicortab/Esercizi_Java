@@ -19,36 +19,64 @@
 
 \section{Ereditarietà e Polimorfismo}
 
-\begin{enumerate}
-    \item \textbf{Classe base Animale} \\
-    Crea una classe \texttt{Animale} con un metodo \texttt{verso()} che stampa un messaggio generico.
+\subsection*{Esercizio 1: Libreria Digitale con ereditarietà multipla indiretta}
+\textbf{Descrizione:}
+\begin{itemize}
+    \item Progettare un sistema per una libreria digitale.
+    \item Esiste una classe astratta \texttt{ElementoBiblioteca} con:
+    \begin{itemize}
+        \item Attributi: \texttt{titolo}, \texttt{anno\_pubblicazione}
+        \item Metodo astratto: \texttt{descrizione()}
+    \end{itemize}
+    \item Da essa derivano:
+    \begin{itemize}
+        \item \texttt{Libro} (aggiunge autore, numero pagine)
+        \item \texttt{Rivista} (aggiunge numero, mese)
+    \end{itemize}
+    \item Entrambe devono ereditare anche da un'interfaccia \texttt{Stampabile} (o classe astratta) con il metodo \texttt{stampa()}.
+    \item Creare una classe \texttt{Ebook} che eredita da \texttt{Libro} e implementa anche \texttt{Stampabile}, ma con logica diversa dalla stampa cartacea.
+    \item Implementare una funzione \texttt{stampa\_info(elemento: ElementoBiblioteca)} che mostri polimorficamente le informazioni, indipendentemente dal tipo concreto.
+\end{itemize}
 
-    \item \textbf{Classi derivata Cane e Gatto} \\
-    Crea le classi \texttt{Cane} e \texttt{Gatto} che estendono \texttt{Animale} e sovrascrivono il metodo \texttt{verso()} per stampare suoni specifici.
+\textbf{Sfida extra:}  
+Se un \texttt{Ebook} viene trattato come \texttt{ElementoBiblioteca}, assicurarsi che la chiamata a \texttt{stampa()} esegua la versione corretta.
 
-    \item \textbf{Polimorfismo con Animale} \\
-    Scrivi un metodo che riceve un oggetto \texttt{Animale} e chiama \texttt{verso()}. Prova a passare oggetti di tipo \texttt{Cane} e \texttt{Gatto}.
+\subsection*{Esercizio 2: Sistema di pagamento polimorfico con override parziale}
+\textbf{Descrizione:}
+\begin{itemize}
+    \item Creare una gerarchia di classi per un sistema di pagamenti:
+    \begin{itemize}
+        \item \texttt{Pagamento} (classe astratta) con:
+        \begin{itemize}
+            \item Attributo \texttt{importo}
+            \item Metodo astratto \texttt{esegui()}
+            \item Metodo concreto \texttt{riepilogo()} che mostra l'importo e chiama polimorficamente un metodo \texttt{dettagli\_transazione()} (che può essere sovrascritto)
+        \end{itemize}
+        \item \texttt{PagamentoCarta} e \texttt{PagamentoBonifico} ereditano e implementano \texttt{esegui()} e \texttt{dettagli\_transazione()}.
+        \item \texttt{PagamentoCriptovaluta} eredita da \texttt{Pagamento} ma non sovrascrive \texttt{dettagli\_transazione()} (usa quello di default se presente).
+    \end{itemize}
+\end{itemize}
 
-    \item \textbf{Costruttore con super} \\
-    Nella classe derivata \texttt{Cane}, crea un costruttore che richiama il costruttore della superclasse \texttt{Animale} usando \texttt{super}.
+\textbf{Sfida extra:}  
+Nel \texttt{riepilogo()}, se una classe non ridefinisce \texttt{dettagli\_transazione()}, far sì che venga mostrato un messaggio generico.
 
-    \item \textbf{Override e overloading} \\
-    Nella classe \texttt{Gatto}, scrivi un metodo \texttt{verso()} che sovrascrive quello della superclasse e un metodo \texttt{verso(String emozione)} che lo sovraccarica.
+\subsection*{Esercizio 3: Zoo con metodi sovrascritti e chiamate alla superclasse}
+\textbf{Descrizione:}
+\begin{itemize}
+    \item Creare una gerarchia:
+    \begin{itemize}
+        \item \texttt{Animale} (con attributi \texttt{nome}, \texttt{specie}, metodo \texttt{verso()} e metodo \texttt{info()}).
+        \item \texttt{Mammifero} e \texttt{Uccello} ereditano da \texttt{Animale}.
+        \item \texttt{Pinguino} eredita da \texttt{Uccello} ma sovrascrive \texttt{verso()} e \texttt{info()}:
+        \begin{itemize}
+            \item In \texttt{info()} deve chiamare prima la versione della superclasse, poi aggiungere dettagli extra.
+        \end{itemize}
+    \end{itemize}
+    \item Creare \texttt{Zoo} con una lista di \texttt{Animale} e un metodo \texttt{mostra\_tutti()} che chiami polimorficamente \texttt{info()} su ogni animale.
+\end{itemize}
 
-    \item \textbf{Classe astratta Veicolo} \\
-    Definisci una classe astratta \texttt{Veicolo} con un metodo astratto \texttt{muovi()}. Crea due classi derivate \texttt{Auto} e \texttt{Bicicletta} che implementano \texttt{muovi()}.
+\textbf{Sfida extra:}  
+Aggiungere una funzione che accetta un \texttt{Animale} e, se è un \texttt{Pinguino}, chiama un metodo aggiuntivo \texttt{nuota()} senza rompere l’uso polimorfico per gli altri animali.
 
-    \item \textbf{Interfaccia Volante} \\
-    Crea un'interfaccia \texttt{Volante} con metodo \texttt{vola()}. Fai in modo che la classe \texttt{Uccello} implementi questa interfaccia.
-
-    \item \textbf{Ereditarietà multipla tramite interfacce} \\
-    Crea due interfacce \texttt{Nuotatore} e \texttt{Volante}. Crea una classe \texttt{Anatra} che implementa entrambe.
-
-    \item \textbf{Casting e istanze} \\
-    Dato un oggetto di tipo \texttt{Animale}, verifica se è istanza di \texttt{Cane} usando \texttt{instanceof} e fai un cast per chiamare un metodo specifico.
-
-    \item \textbf{Metodo finale} \\
-    Spiega e mostra un esempio in cui un metodo è dichiarato \texttt{final} e non può essere sovrascritto nella sottoclasse.
-\end{enumerate}
 
 \end{document}
